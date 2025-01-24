@@ -1,8 +1,6 @@
-from models import Dog , Base
-from sqlalchemy import create_engine
+from models import Dog 
 
-def create_table(base,engine):
-    engine= create_engine('sqlite:///animals.db')
+def create_table(Base,engine):
     Base.metadata.create_all(engine)  
     return engine
 
